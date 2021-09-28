@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
+const { fetchTodo } = require("./controller/todoController")
+
 /* GET home page. */
-router.get("/", function (req, res, next) {
-	res.json({ message: "index" });
-});
+router.get("/", fetchTodo)
 
 module.exports = router;
